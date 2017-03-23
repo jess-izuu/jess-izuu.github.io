@@ -1,73 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        max-width: 600px;
+       #map {
         height: 400px;
-      }
-      #searchBox {
-          margin-top: 20px;
-          padding: 10px;
-          font-size: 20px;
-      }
-      #placeInfo {
-        line-height: 1.8em;
-        font-size: 20px;
-      }
-      #placeInfo .smallerText {
-          font-weight: normal;
-      }
-      .two-col {
-           width:100%;
-           margin:0 auto;
-        }
-        .col-one {
-           float:left;
-           width:40%;
-        }
-        .col-one #map {
-            margin: 0 auto;
-            text-align: center;
-        }
-        .col-two {
-           float:right;
-           width:54%;
-           padding: 2em;
-            border: 2px solid green;
-            -webkit-border-radius: 20px;
--moz-border-radius: 20px;
-border-radius: 20px;
-        }
+        width: 100%;
+       }
     </style>
   </head>
   <body>
-    <h1>Google Maps Tutorial</h1>
-    <p>
-        Search for "UMBC" or "University of Maryland College Park" to get comprehensive results
-    </p>
-    <input id="searchBox" type="text" name="searchBox" placeholder="Search Places">
-    <div class="two-col">
-        <div class="col-one"><div id="map"></div></div>
-        <div class="col-two">
-        <div id="placeInfo">Place Info Will Show Up Here!</div>
-        </div>
-    </div>
-    <!--  References the searchCode.js script file  -->
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
     <script>
-      function setInput(place){
-          document.getElementById('searchBox').value = "UMBC, Hilltop Circle, Baltimore, MD, United States";
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
       }
     </script>
-    <script src="searchCode.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvAUphjt0ofl-PVTX1Y1jQBDMBLaxaH1I&libraries=places&callback=initMap" async defer></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
   </body>
 </html>
