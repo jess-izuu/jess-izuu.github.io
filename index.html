@@ -12,6 +12,7 @@
    </style>
   </head>
   <body>
+    <h1> Welcome! </h1> 
     <div id="map"></div>
     <script>
       // Note: This example requires that you consent to location sharing when
@@ -56,27 +57,14 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxHN-4rLbOTrxBIC6F3jCn8mWO_fYjMf0&callback=initMap">
     </script>
-  </body>
-  
-   <body>
-    <h1>Google Maps Tutorial</h1>
-    <p>
-        Search for "UMBC" or "University of Maryland College Park" to get comprehensive results
-    </p>
-    <input id="searchBox" type="text" name="searchBox" placeholder="Search Places">
+    
+     <input id="searchBox" type="text" name="searchBox" placeholder="Search Places">
     <div class="two-col">
         <div class="col-one"><div id="map"></div></div>
         <div class="col-two">
         <div id="placeInfo">Place Info Will Show Up Here!</div>
         </div>
     </div>
-    <!--  References the searchCode.js script file  -->
-    <script>
-      function setInput(place){
-          document.getElementById('searchBox').value = "UMBC, Hilltop Circle, Baltimore, MD, United States";
-      }
-    </script>
-    <script src="searchCode.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvAUphjt0ofl-PVTX1Y1jQBDMBLaxaH1I&libraries=places&callback=initMap" async defer></script>
+    
   </body>
 </html>
