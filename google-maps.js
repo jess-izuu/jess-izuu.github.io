@@ -1,67 +1,101 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Geolocation</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
+var venueMap;
+function init() {
 
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
+  var pinLocation = new google.maps.LatLng(40.782710,-73.965310);
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+  var mapOptions = {
+    zoom: 15,
+    center: pinLocation,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    panControl: false,
+    zoomControl: true,
+    zoomControlOptions: {
+      style: google.maps.ZoomControlStyle.SMALL,
+      position: google.maps.ControlPosition.TOP_RIGHT
+    },
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+      position: google.maps.ControlPosition.TOP_LEFT
+    },
+
+    scaleControl: true,
+    scaleControlOptions: {
+      position: google.maps.ControlPosition.TOP_CENTER
+    },
+    streetViewControl: false,
+    overviewMapControl: false,
+
+    styles: [
+      {
+        stylers: [
+          { hue: "#00ff6f" },
+          { saturation: -50 }
+        ]
+      }, {
+        featureType: "road",
+        elementType: "geometry",
+        stylers: [
+          { lightness: 100 },
+          { visibility: "simplified" }
+        ]
+      }, {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [
+          { hue: "#ff6600" },
+          { saturation: +80 }
+        ]
+      }, {
+        featureType: "transit",
+        elementType: "labels",
+        stylers: [
+          { hue: "#ff0066" },
+          { saturation: +80 }
+        ]
+      }, {
+        featureType: "poi",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
+      }, {
+        featureType: "poi.park",
+        elementType: "labels",
+        stylers: [
+          { visibility: "on" }
+        ]
+      }, {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [
+          { hue: "#c4f4f4" }
+        ]
+      }, {
+        featureType: "road",
+        elementType: "labels",
+        stylers: [
+          { visibility: "off" }
+        ]
       }
+    ]
+  };
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxHN-4rLbOTrxBIC6F3jCn8mWO_fYjMf0&callback=initMap">
-    </script>
-  </body>
-</html>
+  var venueMap = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  var startPosition = new google.maps.Marker({    // Create a new marker
+    position: pinLocation,                        // Set its position
+    map: venueMap,                                // Specify the map
+    icon: "img/go.png"                            // Path to image from HTML
+  });
+
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.src = 'http://maps.googleapis.com/maps/api/js?sensor=false&callback=init';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
