@@ -1,0 +1,236 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  nav{
+  background-color: #000000;
+  color: #ffffff;
+  position: fixed;
+	/* we can specify all the padding sides in one shorthand 
+  which goes in the same order as a clockface (top, right, bottom, left)*/
+}
+</style>
+  
+<body>
+
+<!-- Navbar (sit on top) -->
+<nav>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> HOME</a>
+ 		<a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
+    <a href="blog.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> ART BOARD</a>
+</nav>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-xxlarge w3-text-white w3-wide">IT'S A JOURNEY</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">A B O U T  M E</h3>
+  <p class="w3-center"><em>Be Brave, Stay Curious, Follow your Passion, and Have Fun!</em></p>
+  <p><br> Welcome! My name is Jess and I have a passion for working with diverse individuals who are curious and motivated to do something bigger than themselves to help change this world for the better. I love to take my imagination to its' depth and I believe that empathizing and seeing things from multiple perspectives is critical to successful design. After all, "Education's purpose is to replace an empty mind with an open one."</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="photo4.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p><br>
+          Outside of tech, I like to stay well-rounded and enjoy: 
+          <br>
+        	<br>
+        	<br>
+          - Photography
+          <br>
+        	<br>
+        	<br>
+          - Personal art projects
+          <br>
+        	<br>
+        	<br>
+          - Networking and learning from others at hackathons
+          <br>
+        	<br>
+        	<br>
+          - Running half marathons 
+          <br>
+        	<br>
+        	<br>
+          - Baking & decorating cakes
+          <br>
+        	<br>
+        	<br>
+          <br>
+          <br>
+         
+       </div>
+      </div>
+    <h3 class="w3-large w3-center w3-padding-16">Strengths: </h3>
+  <p class="w3-wide"><i class="fa fa-smile-o"></i>Resilient</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-heart"></i>Empathetic</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-calculator"></i>Strategic</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-drivers-license-o"></i>Adaptable</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%"></div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+  <h3 class="w3-center">I N S P I R A T I O N</h3>
+  <p class="w3-center"><em>It's not what you look at, it's what you see.</em></p><br>
+    
+<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="photo5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Be Authentic</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Get Outside</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Enjoy the Little Things</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Make Change Happen</b></p>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="photo9.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Find Yourself</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo10.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Diversity is Beautiful</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>I want to Feel Alive</b></p>
+    </div>
+    
+    <div class="w3-col m3">
+      <img src="photo12.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Bundles of Joy</b></p>
+    </div>
+    </div>
+</div>
+    
+ 
+  <h3 class="w3-center">ART PROJECTS</h3>
+  <p class="w3-center"><em>I enjoy intertwining thoughtfulness and creativity to express myself.</em></p><br>
+    
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="photo13.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Decoupaged inspiration for friends</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo14.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Floral Vase</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo15.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Painted personal MD designs for friends</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo16.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Pre-Glazing, Post Clay Spinning</b></p>
+    </div>
+  </div>
+
+
+  </div>
+</div>
+   
+  <h3 class="w3-center">HACKATHONS</h3>
+  <p class="w3-center"><em>I love learning new things, meeting different people, and traveling the country.</em></p><br>
+    
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="photo17.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>MLH Cup Stacking</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo18.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Capital One Hackathon</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo19.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Learning Hardware</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo20.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Integrating the arts and tech at MedHacks</b></p>
+    </div>
+  </div>
+
+
+  </div>
+</div>
+    
+  <h3 class="w3-center">RUNNING & Noms</h3>
+  <p class="w3-center"><em>I never thought I could run 3 miles, yet 13.1 miles but I learned that you grow when you push yourself outside of your comfort zone.</em></p>
+  <p class="w3-center">Oh, and I like baking & decorating cakes, more reasons to run!</p><br>
+    
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="photo21.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+          <p><b>Triple Chocolate Rose Cakes</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo22.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <p><b>Ice Cream Birthday Cake</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo23.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>Baltimore Half-Marathon</b></p>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="photo24.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+         <p><b>MD Double Half-Marathons</b></p>
+    </div>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
