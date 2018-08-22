@@ -1,114 +1,111 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Home</title>
+  <title>Portfolio</title>
 </head>
 
-<style>
-  nav{
-  background-color: #000000;
-  position: fixed;
-	/* we can specify all the padding sides in one shorthand 
-  which goes in the same order as a clockface (top, right, bottom, left)*/
-}
-
-header {
-/*  using fixed position allows us to precisely position an element
-  in relation to the browser viewport*/
-  position:  fixed;
-  top: 50px;
-  left: 20px;
-}
-
-
-/* the body contains everything on the page */
-body{
-  font-family: Cooper Hewitt;
-  font-size:  16px;
-  color: #ffffff;
-  max-width: 1600px;
-}
-
-a{
-/*  we need to specify a color for our links
-  otherwise they will use the default blue*/
-  color: #ffffff;
-/*  this removes the default underline  */
-  text-decoration:  none;
-}
-
-section{
-/*  vh:: viewport height meaning it will be relative to the height
-  of the browser window*/
-  height: 100vh;
-  background-image: url(image_1.jpg);
-/*  our background image will cover the full width and height
-  of our section without skewing or repeating the image*/
-  background-size: cover;
-  
-/*  this will fix the background to the browser viewport 
-  rather than to the section, creating a reveal effect as we scroll*/
-  background-attachment: fixed;
-}
-
-footer {
-  position:  fixed;
-  bottom:  20px;
-  left:  20px;
-}
-
-/* the only thing that gets selected are a tags in footer tags, adds space between links in footer */
-footer a {
-  margin-right: 10px;;
-}
-
-/* we can apply styles to elements based on whether we are hovering over them. this is called a pseudo selector */
-a:hover {
-  color: #dddddd;
-}
-
-/* this will apply styles to any element in our html which has a "class" attribute of "image_2" */
-.image_2 {
- 	background-image: url(image_2.jpg); 
-}
-
-.image_3 {
- 	background-image: url(image_3.jpg); 
-}
-
-.image_4 {
- 	background-image: url(image_4.jpg); 
-}
-
-</style>
-<header>
-	<h1>Jess Izumi</h1>
-  <h3>Designer/Developer</h3>
-</header>
-
-<body>
+<html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<nav>
-    <a href="portfolio.html" title="jessizumi.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="index.html" title="jessizumi.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> HOME</a>
-    <a href="aboutme.html" title="jessizumi.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
-    <a href="blog.html" title="jessizumi.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> ART BOARD</a>
-</nav>
+<style>
+  body{
+    font-family:"Raleway", sans-serif
+    max-width: 100%;
+  }
+  
+  h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-<!-- by adding a class attribute to our sections, we can single them out and specifically style them up -->
-<section class="image_1"> </section>
-<section class="image_2"> </section>
-<section class="image_3"> </section>
-<section class="image_4"> </section>
+  nav{
+  background-color: #000000;
+  color: #ffffff;
+  position: fixed;
+	/* we can specify all the padding sides in one shorthand 
+  which goes in the same order as a clockface (top, right, bottom, left)*/
+
+  .w3-container{
+    width: 500px;
+    height: 350px;
+  }
+}
+</style>
+  
+<nav>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> HOME</a>
+    <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
+    <a href="blog.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> ART BOARD</a>
+</nav>
+  
+<body class="w3-light-grey w3-content" style="max-width:4000px">
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:10px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <div class="w3-container">
+      <br>
+      <br>
+      <br>
+    <h1><b>My Portfolio</b></h1>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="hackathon.html">
+      	<img src="hackathons.png" alt="Hackathon" width=500px height=350px>
+      </a>
+      <div class="w3-container">
+        <p><b>Hackathon Collaboration Tool</b></p>
+      </div>
+    </div>
+  
+      <div class="w3-third w3-container w3-margin-bottom">
+        <a href="patio.html">
+          <img src="patio.png" alt="Patio" width=500px height=350px>
+        </a>
+        <div class="w3-container">
+          <p><b>Single Column Webpage</b></p>
+        </div>
+      </div>
+    
+          <div class="w3-third w3-container w3-margin-bottom">
+            <a href="flowers.html">
+              <img src="flowers.png" alt="Flower" width=500px height=350px>
+            </a>
+            <div class="w3-container">
+              <p><b>Multicolumn Webpage</b></p>
+            </div>
+          </div>
+    </div>
+    
+
+  
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 
 </body>
-
-<footer> 
-  <a href="http://instagram.com/jesszoomi"><i class ="fi-social-instagram social-list-icon"></i>Instagram |</a>
-  <a href="https://github.com/jess-izuu"><i class ="fi-social-github social-list-icon"></i> Github |</a>
-  <a href="https://devpost.com/jess-izuu"><i class ="fi-social-devpost social-list-icon"></i> Devpost</a>
-</footer>
+</html>
