@@ -1,52 +1,79 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-      <title>About Me</title>
-  </head>
+<title>About Me</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="styles.css">
-
-<style>
-  body{
-    max-width: 100%;
-  }
 	
-  nav{
-  background-color: #000000;
-  color: #ffffff;
-  position: fixed;
-  /* we can specify all the padding sides in one shorthand 
-  which goes in the same order as a clockface (top, right, bottom, left)*/
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1{
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/w3images/parallax1.jpg');
+  min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
 }
 </style>
-  
 <body>
+	
 
 <!-- Navbar (sit on top) -->
-<nav>
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
     <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
     <a href="art.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> ART BOARD</a>
     <a href="home.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> BLOG</a>
-</nav>
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
 
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="aboutme.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
+    <a href="art.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> ART BOARD</a>
+    <a href="home.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-home"></i> BLOG</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+</div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">A B O U T  M E</h3>
-  <p><br> Hi! My name is Jess and I like to design.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <img src="photo4.jpg" width="450" height="500">
-	   
-	</div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
+  <h3 class="w3-center">ABOUT ME</h3>
+	
    <p>With a non-traditional career path, I graduated in 2014 Cum Laude with a B.S. in Chemical Engineering and moved straight to New Orleans to work at Dow Chemical as an Improvement Engineer in the Hydrocarbons Unit. 
 	  <br>
 	   <br>
@@ -59,10 +86,82 @@
 	    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016JD025830"><i class ="fi-social-NASA Discover AQ social-list-icon"></i> NASA Discover Air Quality Environmental Engineering</a>
    
          
-       </div>
+	
+   <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+      <img src="photo4.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+       <p>With a non-traditional career path, I graduated in 2014 Cum Laude with a B.S. in Chemical Engineering and moved straight to New Orleans to work at Dow Chemical as an Improvement Engineer in the Hydrocarbons Unit. 
+	  <br>
+	   <br>
+	   Prior to graduation, I spent my summers and school year as an undergraduate researcher in Materials Science Engineering and Environmental Engineering. These experiences allowed the opportunity to contribute to the scientific community in 3 team publications and a self-realization that my original desire to obtain a phD was not the right long term fit. 
+	<br>
+	    <a href="https://pubs.acs.org/doi/abs/10.1021/am3027822"><i class ="fi-social-Georgia Tech Material Science Engineering social-list-icon"></i> Georgia Tech Material Science Engineering </a>
+	<br>
+<a href="https://www.atmos-chem-phys.net/15/2775/2015/acp-15-2775-2015.html"><i class ="fi-social-Environmental Engineering social-list-icon"></i> UMBC Environmental Engineering</a>
+<br>
+	    <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016JD025830"><i class ="fi-social-NASA Discover AQ social-list-icon"></i> NASA Discover Air Quality Environmental Engineering</a>
+   
+         
+    </div>
+  </div>
+    </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
       </div>
     
-
+<!--
 </body>
 	
 <footer> 
